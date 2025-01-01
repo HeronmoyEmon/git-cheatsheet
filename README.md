@@ -331,3 +331,39 @@ Sets a default remote branch for push/pull.
 ```sh
 git push --set-upstream origin <branch-name>
 ```
+
+
+### Commit history of a specific file
+
+```sh
+git log -p -- <file_name>
+```
+
+![git_log](screenshots/file_history.png)
+
+
+
+#### View a specific number of commits
+
+```sh
+git log -p -n 5 -- example.txt
+```
+
+#### Search for commits by author
+
+```sh
+git log -p --author="heronmoy" -- <file_name>
+```
+
+#### limit by time range 
+
+```sh
+git log -p --since="2 weeks ago" -- <file_name>
+```
+
+#### limit by line number
+
+```sh
+git log -L <start_line>,<end_line>:<filename>
+```
+
